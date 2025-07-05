@@ -1,6 +1,5 @@
 import { query } from '../config/db.js';
 import bcrypt from 'bcrypt';
-
 export const loginUsuario = async (req, res) => {
   const { dni, tipo, password } = req.body;
 
@@ -11,7 +10,7 @@ export const loginUsuario = async (req, res) => {
         [dni]
       );
 
-      const rows = getRows(result);
+      const rows = result.rows || result; // funciona con pg y neon
 
       if (rows.length === 0) {
         return res.status(404).json({ message: 'Administrador no encontrado' });
@@ -38,7 +37,7 @@ export const loginUsuario = async (req, res) => {
       [dni]
     );
 
-    const rows = getRows(result);
+    const rows = result.rows || result;
 
     if (rows.length === 0) {
       return res.status(404).json({ message: 'Usuario no encontrado' });
