@@ -6,22 +6,22 @@ export const loginUsuario = async (req, res) => {
   try {
     if (tipo === 'admin') {
       const result = await query(
-        'SELECT * FROM administradores WHERE id_admin = $1',
-        [dni]
-      );
+          'SELECT * FROM administradores WHERE id_admin = $1',
+          [dni]
+        );
 
-      const rows = result.rows || result; // funciona con pg y neon
+        const rows = getRows(result);
 
-      if (rows.length === 0) {
-        return res.status(404).json({ message: 'Administrador no encontrado' });
-      }
+        if (!rows || rows.length === 0) {
+          return res.status(404).json({ message: 'Administrador no encontrado' });
+        }
 
-      const admin = rows[0];
+        const admin = rows[0];
 
-      const passwordValida = await bcrypt.compare(password, admin.password_hash);
-      if (!passwordValida) {
-        return res.status(401).json({ message: 'Contraseña incorrecta' });
-      }
+        const passwordValida = await bcrypt.compare(password, admin.password_hash);
+        if (!passwordValida) {
+          return res.status(401).json({ message: 'Contraseña incorrecta' });
+        }
 
       return res.json({
         id: admin.id_admin,
