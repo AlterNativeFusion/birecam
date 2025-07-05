@@ -1,7 +1,5 @@
 import { query } from '../config/db.js';
 
-import { query } from '../config/db.js';
-
 export const requestLoan = async (req, res) => {
   const {
     dni,
