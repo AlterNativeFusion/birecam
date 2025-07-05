@@ -4,7 +4,7 @@ import FormularioAdministrador from './AdministradorFormulario';
 import NotacionAutorFormulario from './NotacionAutorFormulario';
 import NotacionCategoriaFormulario from './NotacionCategoriaFormulario';
 
-const API_BASE = 'http://localhost:3000';
+const API_BASE = 'https://birecam.onrender.com';
 
 const AjustesReglas = () => {
   const [tabActiva, setTabActiva] = useState('autor');

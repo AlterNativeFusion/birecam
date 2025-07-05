@@ -21,8 +21,19 @@ const PORT = process.env.PORT || 3000;
 const PORT_FRONT = process.env.PORT_FRONT || '*'; 
 
 // Habilitar CORS
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://birecamsanjuan.netlify.app'
+];
+
 app.use(cors({
-  origin: PORT_FRONT,
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('No permitido por CORS'));
+    }
+  },
   credentials: true
 }));
 

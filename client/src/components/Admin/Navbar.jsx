@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 import { useState, useRef, useEffect } from 'react'
-import CesarVallejo from 'client/src/assets/CesarVallejo.png'
+import CesarVallejo from '../../assets/CesarVallejo.png'
 import { LogOut, Moon, Menu, X, ChevronDown } from "lucide-react"
 
 const Navbar = () => {

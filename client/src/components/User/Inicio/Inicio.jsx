@@ -3,7 +3,7 @@ import axios from 'axios';
 import Insignia from '/sanJuan.png';
 import { Search, BookOpenCheck } from 'lucide-react';
 
-const API_BASE = 'http://localhost:3000';
+const API_BASE = 'https://birecam.onrender.com';
 
 const Inicio = () => {
   const [libros, setLibros] = useState([]);

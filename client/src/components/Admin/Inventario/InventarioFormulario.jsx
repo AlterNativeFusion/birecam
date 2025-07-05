@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:3000/stock';
+const API_BASE = 'https://birecam.onrender.com/stock';
 
 function InventarioFormulario({ onClose, onInventarioGuardado, inventarioParaEditar }) {
   const [titulo, setTitulo] = useState('');

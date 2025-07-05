@@ -16,7 +16,7 @@ import {
 
 ChartJS.register(ArcElement, BarElement, CategoryScale, LinearScale, Tooltip, Legend);
 
-const API_BASE = 'http://localhost:3000';
+const API_BASE = 'https://birecam.onrender.com';
 
 const ReporteUsuarios = () => {
   const [usuarios, setUsuarios] = useState([]);

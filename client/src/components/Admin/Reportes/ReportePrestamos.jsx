@@ -5,7 +5,7 @@ import { saveAs } from 'file-saver';
 import ExcelJS from 'exceljs';
 import { Page, Text, View, Document, StyleSheet, pdf } from '@react-pdf/renderer';
 
-const API_BASE = 'http://localhost:3000';
+const API_BASE = 'https://birecam.onrender.com';
 
 const ReportePrestamos = () => {
   const [prestamos, setPrestamos] = useState([]);

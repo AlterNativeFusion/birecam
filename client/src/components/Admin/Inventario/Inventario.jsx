@@ -19,7 +19,7 @@ function Inventario() {
 
   const [tabActivo, setTabActivo] = useState('inventario');
 
-  const API_BASE = 'http://localhost:3000/stock'; 
+  const API_BASE = 'https://birecam.onrender.com/stock'; 
 
   const cargarInventario = async () => {
     setCargando(true);

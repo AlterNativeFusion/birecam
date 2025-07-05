@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const API_BASE = 'http://localhost:3000';
+const API_BASE = 'https://birecam.onrender.com';
 
 const Historial = () => {
   const [historial, setHistorial] = useState([]);

@@ -28,7 +28,7 @@ function UsuarioFormulario({ onClose, onUsuarioRegistrado, usuarioParaEditar }) 
   const [error, setError] = useState('');
   const dniRef = useRef(null);
 
-  const API_BASE = 'http://localhost:3000/users';
+  const API_BASE = 'https://birecam.onrender.com/users';
 
   useEffect(() => {
   if (usuarioParaEditar) {

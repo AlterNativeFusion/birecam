@@ -9,7 +9,7 @@ const LoginFormulario = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const API_BASE = 'http://localhost:3000/login';
+  const API_BASE = 'https://birecam.onrender.com/login';
 
   const handleLogin = async (e) => {
     e.preventDefault();

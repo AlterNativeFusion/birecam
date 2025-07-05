@@ -16,7 +16,7 @@ function Usuarios() {
   const [filtroNombres, setFiltroNombres] = useState('');
   const [filtroApellidos, setFiltroApellidos] = useState('');
 
-  const API_BASE = 'http://localhost:3000';
+  const API_BASE = 'https://birecam.onrender.com';
 
   const cargarUsuarios = async () => {
     setCargando(true);

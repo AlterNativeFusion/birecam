@@ -4,7 +4,7 @@ import Insignia from '/sanJuan.png';
 import { BookCheck, Clock4 } from 'lucide-react';
 import PrestamoFormulario from './PrestamoFormulario';
 
-const API_BASE = 'http://localhost:3000';
+const API_BASE = 'https://birecam.onrender.com';
 
 const Inicio = () => {
   const [solicitudes, setSolicitudes] = useState([]);
