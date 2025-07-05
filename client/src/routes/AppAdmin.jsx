@@ -15,11 +15,11 @@ function AppAdmin() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Inicio/>} />
-          <Route path="/users" element={<Usuarios/>} />
-          <Route path="/stock" element={<Inventario/>} />
-          <Route path="/report/users" element={<ReporteUsuarios/>} />
-          <Route path="/report/loan" element={<ReportePrestamos/>} />
-          <Route path="/config" element={<AjustesReglas/>} />
+          <Route path="users" element={<Usuarios/>} />
+          <Route path="stock" element={<Inventario/>} />
+          <Route path="report/users" element={<ReporteUsuarios/>} />
+          <Route path="report/loan" element={<ReportePrestamos/>} />
+          <Route path="config" element={<AjustesReglas/>} />
         </Routes>
       </>
   );

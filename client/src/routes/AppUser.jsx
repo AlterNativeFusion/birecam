@@ -10,7 +10,7 @@ function AppUser() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Inicio/>} />
-          <Route path="/history" element={<Historial/>} />
+          <Route path="history" element={<Historial/>} />
         </Routes>
       </>
   );

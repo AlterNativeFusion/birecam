@@ -11,11 +11,13 @@ export const loginUsuario = async (req, res) => {
         [dni]
       );
 
-      if (result.rows.length === 0) {
+      const rows = getRows(result);
+
+      if (rows.length === 0) {
         return res.status(404).json({ message: 'Administrador no encontrado' });
       }
 
-      const admin = result.rows[0];
+      const admin = rows[0];
 
       const passwordValida = await bcrypt.compare(password, admin.password_hash);
       if (!passwordValida) {
@@ -36,11 +38,13 @@ export const loginUsuario = async (req, res) => {
       [dni]
     );
 
-    if (result.rows.length === 0) {
+    const rows = getRows(result);
+
+    if (rows.length === 0) {
       return res.status(404).json({ message: 'Usuario no encontrado' });
     }
 
-    const usuario = result.rows[0];
+    const usuario = rows[0];
 
     const passwordValida = await bcrypt.compare(password, usuario.password_hash);
     if (!passwordValida) {
