@@ -12,7 +12,7 @@ export const loginUsuario = async (req, res) => {
         [dni]
       );
 
-      const rows = getRows(result);
+      const rows = Array.isArray(result?.rows) ? result.rows : result;
 
       if (!rows || rows.length === 0) {
         return res.status(404).json({ message: 'Administrador no encontrado' });
@@ -39,7 +39,7 @@ export const loginUsuario = async (req, res) => {
       [dni]
     );
 
-    const rows = getRows(result); // ✅ usa getRows aquí también por consistencia
+    const rows = Array.isArray(result?.rows) ? result.rows : result;
 
     if (rows.length === 0) {
       return res.status(404).json({ message: 'Usuario no encontrado' });
