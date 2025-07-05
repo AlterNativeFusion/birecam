@@ -1,6 +1,6 @@
 import { query } from '../config/db.js';
 import bcrypt from 'bcrypt';
-import { getRows } from '../utils/dbutils.js';
+import { getRows } from '../utils/dbUtils.js';
 
 export const loginUsuario = async (req, res) => {
   const { dni, tipo, password } = req.body;
