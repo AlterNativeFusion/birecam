@@ -1,4 +1,5 @@
-export function getRows(result) {
-  return result?.rows || result;
-}
-//saesa
+export const getRows = (result) => {
+  if (Array.isArray(result)) return result;
+  if (result?.rows) return result.rows;
+  return [];
+};
